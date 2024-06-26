@@ -6,7 +6,7 @@ export default function handleProfileSignup(firstName, lastName, fileName) {
     signUpUser(firstName, lastName),
     uploadPhoto(fileName),
   ]).then((values) => {
-    let arr = [];
+    const arr = [];
     for (const item of values) {
       arr.push({ status: item.status, value: item.value || item.reason });
     }
